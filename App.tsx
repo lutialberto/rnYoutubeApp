@@ -1,9 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import React from 'react';
 import MainBottomTabNavigator from '~/navigation/MainBottomTabNavigator';
 
 const App = () => {
-  return <MainBottomTabNavigator />;
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <StatusBar barStyle="dark-content" />
+      <MainBottomTabNavigator />
+    </SafeAreaView>
+  );
 };
 
 export default App;
