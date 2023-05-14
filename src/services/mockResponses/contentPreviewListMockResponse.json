@@ -1,0 +1,44 @@
+{
+  "sections": [
+    {
+      "type": "shorts",
+      "data": [
+        {
+          "id": "1",
+          "title": "First Item",
+          "author": "Author 1",
+          "duration": 60,
+          "authorImage": "https://yt3.ggpht.com/lAk48f7ez_Z78afKJbwNaH00JUE9Hct5rY0uuBcoQbDOzoypDGqyD0IJzTuZFxL_gUELRXJT=s68-c-k-c0x00ffffff-no-rj",
+          "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
+          "views": "100",
+          "publicationDate": "3 minutos"
+        }
+      ]
+    },
+    {
+      "type": "videos",
+      "data": [
+        {
+          "id": "2",
+          "title": "First Item",
+          "author": "Author 1",
+          "duration": 60,
+          "authorImage": "https://yt3.ggpht.com/lAk48f7ez_Z78afKJbwNaH00JUE9Hct5rY0uuBcoQbDOzoypDGqyD0IJzTuZFxL_gUELRXJT=s68-c-k-c0x00ffffff-no-rj",
+          "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
+          "views": "100",
+          "publicationDate": "3 minutos"
+        },
+        {
+          "id": "3",
+          "title": "First Item",
+          "author": "Author 1",
+          "duration": 60,
+          "authorImage": "https://yt3.ggpht.com/lAk48f7ez_Z78afKJbwNaH00JUE9Hct5rY0uuBcoQbDOzoypDGqyD0IJzTuZFxL_gUELRXJT=s68-c-k-c0x00ffffff-no-rj",
+          "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
+          "views": "100",
+          "publicationDate": "3 minutos"
+        }
+      ]
+    }
+  ]
+}
