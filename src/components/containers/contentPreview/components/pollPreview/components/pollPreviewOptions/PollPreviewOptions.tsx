@@ -1,4 +1,4 @@
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {IPollPreviewOptionsProps} from './IPollPreviewOptionsProps';
 
@@ -11,19 +11,26 @@ const PollPreviewOptions = (props: IPollPreviewOptionsProps) => {
           key={option.id}
           onPress={() => setSelected(index)}
           style={[styles.textContainer, selected === index && styles.textContainerSelected]}>
+          <Image source={{uri: option.image}} style={{height: 80, aspectRatio: 1}} />
           <View
-            style={[
-              styles.bar,
-              {width: `${option.votes}%`},
-              selected === index && {backgroundColor: 'blue'},
-            ]}
-          />
-          <Text style={[styles.text, selected === index && {color: 'blue'}]}>{option.name}</Text>
-          {selected !== undefined && (
-            <Text style={[styles.textVotes, selected === index && {color: 'blue'}]}>
-              {option.votes} %
-            </Text>
-          )}
+            style={{
+              flexDirection: 'row',
+              flex: 1,
+            }}>
+            <View
+              style={[
+                styles.bar,
+                {width: `${option.votes}%`},
+                selected === index && {backgroundColor: 'blue'},
+              ]}
+            />
+            <Text style={[styles.text, selected === index && {color: 'blue'}]}>{option.name}</Text>
+            {selected !== undefined && (
+              <Text style={[styles.textVotes, selected === index && {color: 'blue'}]}>
+                {option.votes} %
+              </Text>
+            )}
+          </View>
         </Pressable>
       ))}
     </View>
@@ -53,7 +60,6 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     flexDirection: 'row',
-    color: 'gray',
     borderColor: 'gray',
     borderWidth: 2,
     borderRadius: 5,

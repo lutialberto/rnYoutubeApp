@@ -33,6 +33,7 @@ export interface IContentPreviewOption {
   id: string;
   name: string;
   votes: number;
+  image: string;
 }
 
 export interface IContentPreviewHeader {

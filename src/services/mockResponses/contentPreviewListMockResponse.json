@@ -29,9 +29,24 @@
           },
           "question": "¿Qué te pareció el video?",
           "options": [
-            {"id": "1", "name": "Opción 1", "votes": 50},
-            {"id": "2", "name": "Opción 2", "votes": 40},
-            {"id": "3", "name": "Opción 3", "votes": 10}
+            {
+              "id": "1",
+              "name": "Opción 1",
+              "votes": 50,
+              "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg"
+            },
+            {
+              "id": "2",
+              "name": "Opción 2",
+              "votes": 40,
+              "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg"
+            },
+            {
+              "id": "3",
+              "name": "Opción 3",
+              "votes": 10,
+              "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg"
+            }
           ],
           "subscribed": true,
           "responses": "78k",
