@@ -1,7 +1,7 @@
-import {IContentPreviewItem} from '~/services/models/ContentPreviewListResponse';
+import {IContentPreviewVideo} from '~/services/models/ContentPreviewListResponse';
 
 export interface IVideoPreviewProps {
-  video: IContentPreviewItem;
+  video: IContentPreviewVideo;
   onActionPress: () => void;
   goToAuthorChanel: () => void;
   goToVideo: () => void;

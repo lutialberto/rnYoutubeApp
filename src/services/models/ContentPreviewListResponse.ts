@@ -4,16 +4,35 @@ export interface IContentPreviewListResponse {
 
 export interface IContentPreviewSection {
   type: IContentPreviewSectionType;
-  data: IContentPreviewItem[];
+  data: sectionData[];
 }
 
-export interface IContentPreviewItem {
+export type sectionData = IContentPreviewVideo | IContentPreviewPoll;
+
+export interface IContentPreviewVideo {
   id: string;
   header: IContentPreviewHeader;
   title: string;
   image: string;
   views: string;
   duration: number;
+}
+
+export interface IContentPreviewPoll {
+  id: string;
+  header: IContentPreviewHeader;
+  question: string;
+  options: IContentPreviewOption[];
+  subscribed: boolean;
+  responses: string;
+  comments: string;
+  likes: string;
+}
+
+export interface IContentPreviewOption {
+  id: string;
+  name: string;
+  votes: string;
 }
 
 export interface IContentPreviewHeader {

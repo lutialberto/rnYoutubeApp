@@ -18,6 +18,29 @@
       ]
     },
     {
+      "type": "polls",
+      "data": [
+        {
+          "id": "4",
+          "header": {
+            "author": "Author 1",
+            "authorImage": "https://yt3.ggpht.com/lAk48f7ez_Z78afKJbwNaH00JUE9Hct5rY0uuBcoQbDOzoypDGqyD0IJzTuZFxL_gUELRXJT=s68-c-k-c0x00ffffff-no-rj",
+            "publicationDate": "3 minutos"
+          },
+          "question": "¿Qué te pareció el video?",
+          "options": [
+            {"id": "1", "text": "Opción 1"},
+            {"id": "2", "text": "Opción 2"},
+            {"id": "3", "text": "Opción 3"}
+          ],
+          "subscribed": true,
+          "responses": "78k",
+          "comments": "426",
+          "likes": "1.9k"
+        }
+      ]
+    },
+    {
       "type": "videos",
       "data": [
         {

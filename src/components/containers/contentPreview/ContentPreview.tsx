@@ -3,6 +3,7 @@ import React from 'react';
 import SectionSeparator from './components/sectionSeparator/SectionSeparator';
 import {IContentPreviewProps} from './IContentPreviewProps';
 import VideoPreview from './components/videoPreview/VideoPreview';
+import {IContentPreviewVideo} from '~/services/models/ContentPreviewListResponse';
 
 const ContentPreview = (props: IContentPreviewProps) => {
   return (
@@ -18,7 +19,7 @@ const ContentPreview = (props: IContentPreviewProps) => {
               <Text style={{fontWeight: 'bold'}}>{type}</Text>
               {data.map(item => (
                 <View style={styles.item} key={item.id}>
-                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={styles.title}>{item.id}</Text>
                 </View>
               ))}
             </>
@@ -29,7 +30,7 @@ const ContentPreview = (props: IContentPreviewProps) => {
         <>
           {type === 'videos' && (
             <VideoPreview
-              video={item}
+              video={item as IContentPreviewVideo}
               onActionPress={() => console.log('action pressed')}
               goToAuthorChanel={() => console.log('go to author chanel')}
               goToVideo={() => console.log('go to video')}
