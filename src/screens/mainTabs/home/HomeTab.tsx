@@ -1,11 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Header from '~/components/containers/header/Header';
+import ScreenContainer from '~/components/containers/screenContainer/ScreenContainer';
 
 const HomeTab = () => {
   return (
-    <View>
+    <ScreenContainer>
+      <Header />
       <Text>HomeTab</Text>
-    </View>
+    </ScreenContainer>
   );
 };
 
