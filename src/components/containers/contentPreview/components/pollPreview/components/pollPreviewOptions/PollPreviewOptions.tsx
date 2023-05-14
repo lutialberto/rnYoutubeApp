@@ -1,6 +1,7 @@
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {IPollPreviewOptionsProps} from './IPollPreviewOptionsProps';
+import {colors} from '~/constants/Colors';
 
 const PollPreviewOptions = (props: IPollPreviewOptionsProps) => {
   const [selected, setSelected] = useState<number | undefined>();
@@ -21,12 +22,14 @@ const PollPreviewOptions = (props: IPollPreviewOptionsProps) => {
               style={[
                 styles.bar,
                 {width: `${option.votes}%`},
-                selected === index && {backgroundColor: 'blue'},
+                selected === index && {backgroundColor: colors.lightBlue},
               ]}
             />
-            <Text style={[styles.text, selected === index && {color: 'blue'}]}>{option.name}</Text>
+            <Text style={[styles.text, selected === index && {color: colors.lightBlue}]}>
+              {option.name}
+            </Text>
             {selected !== undefined && (
-              <Text style={[styles.textVotes, selected === index && {color: 'blue'}]}>
+              <Text style={[styles.textVotes, selected === index && {color: colors.lightBlue}]}>
                 {option.votes} %
               </Text>
             )}
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   textContainerSelected: {
-    borderColor: 'blue',
+    borderColor: colors.lightBlue,
   },
   textVotes: {
     color: 'gray',

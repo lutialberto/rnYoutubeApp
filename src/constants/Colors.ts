@@ -3,5 +3,5 @@ export const colors = {
   font: 'white',
   background: 'black',
   cardBackground: '#333333',
-  blue: '#007AFF',
+  lightBlue: '#00BFFF',
 };

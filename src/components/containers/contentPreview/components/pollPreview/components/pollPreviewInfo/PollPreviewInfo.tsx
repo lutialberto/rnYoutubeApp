@@ -8,8 +8,8 @@ import {colors} from '~/constants/Colors';
 
 const PollPreviewInfo = (props: IPollPreviewInfoProps) => {
   const answers = `${props.responses} votos`;
-  const likeStyle = [styles.icon, props.likeStatus === 'liked' && {color: colors.blue}];
-  const dislikeStyle = [styles.icon, props.likeStatus === 'disliked' && {color: colors.blue}];
+  const likeStyle = [styles.icon, props.likeStatus === 'liked' && {color: colors.lightBlue}];
+  const dislikeStyle = [styles.icon, props.likeStatus === 'disliked' && {color: colors.lightBlue}];
 
   return (
     <View>
