@@ -4,7 +4,7 @@ import {IVideoPreviewProps} from './IVideoPreviewProps';
 import VideoImagePreview from './components/videoImagePreview/VideoImagePreview';
 import ChanelProfileIcon from '~/components/chanelProfileIcon/ChanelProfileIcon';
 import VideoMainInfo from './components/videoMainInfo/VideoMainInfo';
-import ActionIcon from './components/actionIcon/ActionIcon';
+import ActionIcon from '~/components/actionIcon/ActionIcon';
 
 const VideoPreview = (props: IVideoPreviewProps) => {
   return (

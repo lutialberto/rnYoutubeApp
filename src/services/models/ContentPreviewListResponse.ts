@@ -32,7 +32,7 @@ export interface IContentPreviewPoll {
 export interface IContentPreviewOption {
   id: string;
   name: string;
-  votes: string;
+  votes: number;
 }
 
 export interface IContentPreviewHeader {
@@ -41,4 +41,4 @@ export interface IContentPreviewHeader {
   publicationDate: string;
 }
 
-export type IContentPreviewSectionType = 'shorts' | 'videos' | 'poll' | 'publication';
+export type IContentPreviewSectionType = 'shorts' | 'videos' | 'polls' | 'publications';

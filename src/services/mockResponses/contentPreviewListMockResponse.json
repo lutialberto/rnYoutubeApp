@@ -29,9 +29,9 @@
           },
           "question": "¿Qué te pareció el video?",
           "options": [
-            {"id": "1", "text": "Opción 1"},
-            {"id": "2", "text": "Opción 2"},
-            {"id": "3", "text": "Opción 3"}
+            {"id": "1", "name": "Opción 1", "votes": 50},
+            {"id": "2", "name": "Opción 2", "votes": 40},
+            {"id": "3", "name": "Opción 3", "votes": 10}
           ],
           "subscribed": true,
           "responses": "78k",

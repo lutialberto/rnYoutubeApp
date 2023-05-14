@@ -3,7 +3,11 @@ import React from 'react';
 import SectionSeparator from './components/sectionSeparator/SectionSeparator';
 import {IContentPreviewProps} from './IContentPreviewProps';
 import VideoPreview from './components/videoPreview/VideoPreview';
-import {IContentPreviewVideo} from '~/services/models/ContentPreviewListResponse';
+import {
+  IContentPreviewPoll,
+  IContentPreviewVideo,
+} from '~/services/models/ContentPreviewListResponse';
+import PollPreview from './components/pollPreview/PollPreview';
 
 const ContentPreview = (props: IContentPreviewProps) => {
   return (
@@ -34,6 +38,14 @@ const ContentPreview = (props: IContentPreviewProps) => {
               onActionPress={() => console.log('action pressed')}
               goToAuthorChanel={() => console.log('go to author chanel')}
               goToVideo={() => console.log('go to video')}
+            />
+          )}
+          {type === 'polls' && (
+            <PollPreview
+              poll={item as IContentPreviewPoll}
+              onLikePress={() => console.log('like pressed')}
+              onCommentPress={() => console.log('comment pressed')}
+              onDislikePress={() => console.log('dislike pressed')}
             />
           )}
         </>
