@@ -9,12 +9,16 @@ export interface IContentPreviewSection {
 
 export interface IContentPreviewItem {
   id: string;
+  header: IContentPreviewHeader;
   title: string;
   image: string;
-  author: string;
-  authorImage: string;
   views: string;
   duration: number;
+}
+
+export interface IContentPreviewHeader {
+  author: string;
+  authorImage: string;
   publicationDate: string;
 }
 

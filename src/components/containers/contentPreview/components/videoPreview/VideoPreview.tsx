@@ -15,10 +15,13 @@ const VideoPreview = (props: IVideoPreviewProps) => {
         onPress={props.goToVideo}
       />
       <View style={styles.row}>
-        <ChanelProfileIcon image={props.video.authorImage} onPress={props.goToAuthorChanel} />
+        <ChanelProfileIcon
+          image={props.video.header.authorImage}
+          onPress={props.goToAuthorChanel}
+        />
         <VideoMainInfo
-          author={props.video.author}
-          publicationDate={props.video.publicationDate}
+          author={props.video.header.author}
+          publicationDate={props.video.header.publicationDate}
           title={props.video.title}
           views={props.video.views}
           goToAuthorChanel={props.goToAuthorChanel}
