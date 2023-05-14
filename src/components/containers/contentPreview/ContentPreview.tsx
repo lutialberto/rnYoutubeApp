@@ -27,7 +27,7 @@ const ContentPreview = (props: IContentPreviewProps) => {
       )}
       renderItem={({item, section: {type}}) => (
         <>
-          {type !== 'shorts' && (
+          {type === 'videos' && (
             <VideoPreview
               video={item}
               onActionPress={() => console.log('action pressed')}
