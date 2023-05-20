@@ -1,13 +1,15 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {IPollPreviewProps} from './IPollPreviewProps';
 import PollPreviewHeader from './components/pollPreviewHeader/PollPreviewHeader';
 import PollPreviewOptions from './components/pollPreviewOptions/PollPreviewOptions';
 import PollPreviewInfo from './components/pollPreviewInfo/PollPreviewInfo';
 import PollPreviewComments from './components/pollPreviewComments/PollPreviewComments';
 import {colors} from '~/constants/Colors';
+import {LikeStatus} from '~/models/LikeStatus';
 
 const PollPreview = (props: IPollPreviewProps) => {
+  const [liked, setLiked] = useState<LikeStatus>('notLiked');
   return (
     <View style={styles.container}>
       <PollPreviewHeader
@@ -23,10 +25,16 @@ const PollPreview = (props: IPollPreviewProps) => {
         responses={props.poll.responses}
         likes={props.poll.likes}
         comments={props.poll.comments}
-        likeStatus="notLiked"
-        onLikePress={props.onLikePress}
+        likeStatus={liked}
+        onLikePress={() => {
+          setLiked('liked');
+          props.onLikePress();
+        }}
         onCommentPress={props.onCommentPress}
-        onDislikePress={props.onDislikePress}
+        onDislikePress={() => {
+          setLiked('disliked');
+          props.onDislikePress();
+        }}
       />
       <PollPreviewComments profileImage={props.poll.header.authorImage} />
     </View>

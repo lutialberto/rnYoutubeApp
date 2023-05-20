@@ -1,8 +1,10 @@
+import {LikeStatus} from '~/models/LikeStatus';
+
 export interface IPollPreviewInfoProps {
   responses: string;
   likes: string;
   comments: string;
-  likeStatus: 'liked' | 'notLiked' | 'disliked';
+  likeStatus: LikeStatus;
   onLikePress: () => void;
   onDislikePress: () => void;
   onCommentPress: () => void;
