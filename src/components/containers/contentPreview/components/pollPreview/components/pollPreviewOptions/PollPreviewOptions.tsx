@@ -21,6 +21,9 @@ const PollPreviewOptions = (props: IPollPreviewOptionsProps) => {
             <View
               style={[
                 styles.bar,
+                selected !== undefined && {
+                  backgroundColor: 'gray',
+                },
                 {width: `${option.votes}%`},
                 selected === index && {backgroundColor: colors.lightBlue},
               ]}
@@ -48,7 +51,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   bar: {
-    backgroundColor: 'gray',
     opacity: 0.3,
     position: 'absolute',
     height: '100%',
