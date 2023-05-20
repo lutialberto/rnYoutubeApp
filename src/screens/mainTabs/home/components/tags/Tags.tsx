@@ -1,7 +1,7 @@
 import {ScrollView, StyleSheet, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import Tag from '~/components/tags/tag/Tag';
-import CompassIcon from '~/assets/icons/Chromecast.svg';
+import CompassIcon from '~/assets/icons/Compass.svg';
 import {colors} from '~/constants/Colors';
 import {getTags} from '~/services/homeTabServices';
 import {TagListResponse} from '~/services/models/TagListResponse';
