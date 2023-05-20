@@ -9,7 +9,6 @@ import {colors} from '~/constants/Colors';
 import {LikeStatus} from '~/models/LikeStatus';
 
 const PollPreview = (props: IPollPreviewProps) => {
-  const [liked, setLiked] = useState<LikeStatus>('notLiked');
   return (
     <View style={styles.container}>
       <PollPreviewHeader
@@ -25,16 +24,10 @@ const PollPreview = (props: IPollPreviewProps) => {
         responses={props.poll.responses}
         likes={props.poll.likes}
         comments={props.poll.comments}
-        likeStatus={liked}
-        onLikePress={() => {
-          setLiked('liked');
-          props.onLikePress();
-        }}
+        likeStatus={'notLiked'}
+        onLikePress={props.onLikePress}
         onCommentPress={props.onCommentPress}
-        onDislikePress={() => {
-          setLiked('disliked');
-          props.onDislikePress();
-        }}
+        onDislikePress={props.onDislikePress}
       />
       <PollPreviewComments profileImage={props.poll.header.authorImage} />
     </View>
