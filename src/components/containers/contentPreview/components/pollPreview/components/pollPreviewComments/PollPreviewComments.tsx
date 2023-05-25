@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {IPollPreviewCommentsProps} from './IPollPreviewCommentsProps';
 import ChanelProfileIcon from '~/components/chanelProfileIcon/ChanelProfileIcon';
@@ -6,13 +6,13 @@ import {colors} from '~/constants/Colors';
 
 const PollPreviewComments = (props: IPollPreviewCommentsProps) => {
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={props.onPress}>
       <Text style={styles.commentTitle}>Comentarios</Text>
       <View style={styles.row}>
         <ChanelProfileIcon image={props.profileImage} onPress={() => {}} size={30} />
         <Text style={styles.comment}>Agrega un comentario...</Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 

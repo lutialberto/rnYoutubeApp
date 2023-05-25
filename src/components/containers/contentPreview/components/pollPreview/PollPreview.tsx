@@ -6,9 +6,11 @@ import PollPreviewOptions from './components/pollPreviewOptions/PollPreviewOptio
 import PollPreviewInfo from './components/pollPreviewInfo/PollPreviewInfo';
 import PollPreviewComments from './components/pollPreviewComments/PollPreviewComments';
 import {colors} from '~/constants/Colors';
-import {LikeStatus} from '~/models/LikeStatus';
+import CommentModal from '~/components/containers/modals/commentModal/CommentModal';
 
 const PollPreview = (props: IPollPreviewProps) => {
+  const [showCommentSection, setShowCommentSection] = useState(false);
+
   return (
     <View style={styles.container}>
       <PollPreviewHeader
@@ -26,10 +28,25 @@ const PollPreview = (props: IPollPreviewProps) => {
         comments={props.poll.comments}
         likeStatus={'notLiked'}
         onLikePress={props.onLikePress}
-        onCommentPress={props.onCommentPress}
+        onCommentPress={() => {
+          setShowCommentSection(true);
+          props.onCommentPress();
+        }}
         onDislikePress={props.onDislikePress}
       />
-      <PollPreviewComments profileImage={props.poll.header.authorImage} />
+      <PollPreviewComments
+        profileImage={props.poll.header.authorImage}
+        onPress={() => {
+          setShowCommentSection(true);
+          props.onCommentPress();
+        }}
+      />
+      <CommentModal
+        show={showCommentSection}
+        onClose={() => setShowCommentSection(false)}
+        onComment={() => setShowCommentSection(false)}
+        numberOfComments={props.poll.comments}
+      />
     </View>
   );
 };

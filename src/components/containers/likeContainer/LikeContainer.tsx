@@ -19,12 +19,12 @@ const LikeContainer = (props: ILikeContainerProps) => {
   const dislikeStyle = [styles.icon, liked === 'disliked' && {color: colors.lightBlue}];
 
   const handleLiked = () => {
-    setLiked('liked');
+    setLiked(liked == 'liked' ? 'notLiked' : 'liked');
     props.onLikePress();
   };
 
   const handleDisliked = () => {
-    setLiked('disliked');
+    setLiked(liked == 'disliked' ? 'notLiked' : 'disliked');
     props.onDislikePress();
   };
 

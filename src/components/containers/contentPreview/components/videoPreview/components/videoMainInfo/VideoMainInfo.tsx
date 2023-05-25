@@ -2,9 +2,10 @@ import {Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {IVideoMainInfoProps} from './IVideoMainInfoProps';
 import {colors} from '~/constants/Colors';
+import TextInfo from '~/components/texts/textInfo/TextInfo';
 
 const VideoMainInfo = (props: IVideoMainInfoProps) => {
-  const info = `${props.author} · ${props.views} vistas · hace ${props.publicationDate}`;
+  const info = [props.author, `${props.views} vistas`, `hace ${props.publicationDate}`];
 
   return (
     <View style={styles.container}>
@@ -12,7 +13,7 @@ const VideoMainInfo = (props: IVideoMainInfoProps) => {
         <Text style={styles.title}>{props.title}</Text>
       </Pressable>
       <Pressable onPress={props.goToAuthorChanel}>
-        <Text style={styles.info}>{info}</Text>
+        <TextInfo info={info} />
       </Pressable>
     </View>
   );
@@ -28,9 +29,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: colors.font,
-  },
-  info: {
-    fontSize: 12,
-    color: 'gray',
   },
 });

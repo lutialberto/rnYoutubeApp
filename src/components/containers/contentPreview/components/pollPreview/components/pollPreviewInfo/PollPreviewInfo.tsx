@@ -8,6 +8,10 @@ import LikeContainer from '~/components/containers/likeContainer/LikeContainer';
 const PollPreviewInfo = (props: IPollPreviewInfoProps) => {
   const answers = `${props.responses} votos`;
 
+  const handleCommentPress = () => {
+    props.onCommentPress();
+  };
+
   return (
     <View>
       <Text>{answers}</Text>
@@ -19,7 +23,7 @@ const PollPreviewInfo = (props: IPollPreviewInfoProps) => {
           onDislikePress={props.onDislikePress}
         />
         <View style={styles.gap} />
-        <Pressable onPress={props.onCommentPress} style={styles.row}>
+        <Pressable onPress={handleCommentPress} style={styles.row}>
           <CommentsIcon style={styles.icon} />
           <Text style={styles.text}>{props.comments}</Text>
         </Pressable>
