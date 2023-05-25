@@ -1,4 +1,4 @@
-import {FlatList, StyleSheet, View} from 'react-native';
+import {FlatList, NativeScrollEvent, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CommentForm from './components/commentForm/CommentForm';
 import CommentItem from './components/commentItem/CommentItem';
