@@ -1,12 +1,15 @@
 import {StyleSheet, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {IVideoPreviewProps} from './IVideoPreviewProps';
 import VideoImagePreview from './components/videoImagePreview/VideoImagePreview';
 import ChanelProfileIcon from '~/components/chanelProfileIcon/ChanelProfileIcon';
 import VideoMainInfo from './components/videoMainInfo/VideoMainInfo';
 import ActionIcon from '~/components/actionIcon/ActionIcon';
+import VideoPreviewActionsModal from './components/videoPreviewActionsModal/VideoPreviewActionsModal';
 
 const VideoPreview = (props: IVideoPreviewProps) => {
+  const [showActions, setShowActions] = useState(false);
+
   return (
     <View>
       <VideoImagePreview
@@ -27,8 +30,14 @@ const VideoPreview = (props: IVideoPreviewProps) => {
           goToAuthorChanel={props.goToAuthorChanel}
           goToVideo={props.goToVideo}
         />
-        <ActionIcon onPress={props.onActionPress} />
+        <ActionIcon
+          onPress={() => {
+            setShowActions(true);
+            props.onActionPress();
+          }}
+        />
       </View>
+      <VideoPreviewActionsModal show={showActions} onClose={() => setShowActions(false)} />
     </View>
   );
 };
