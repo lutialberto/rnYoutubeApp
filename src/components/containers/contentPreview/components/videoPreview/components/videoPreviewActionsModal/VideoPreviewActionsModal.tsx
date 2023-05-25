@@ -1,4 +1,4 @@
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text} from 'react-native';
 import React from 'react';
 import ModalWrapper from '~/components/containers/modals/modalWrapper/ModalWrapper';
 import ClockIcon from '~/assets/icons/Clock.svg';
@@ -55,13 +55,22 @@ const VideoPreviewActionsModal = (props: IVideoPreviewActionsModalProps) => {
     },
     {icon: <FlagIcon style={styles.icon} />, title: 'Denunciar', onPress: () => console.log('dsa')},
   ];
+
+  const handleActionPress = (onPress: () => void) => {
+    props.onClose();
+    onPress();
+  };
+
   return (
     <ModalWrapper
       show={props.show}
       onClose={props.onClose}
       childrenContainerStyles={styles.container}>
       {actions.map(action => (
-        <Pressable key={action.title} style={styles.actionContainer} onPress={action.onPress}>
+        <Pressable
+          key={action.title}
+          style={styles.actionContainer}
+          onPress={() => handleActionPress(action.onPress)}>
           {action.icon}
           <Text style={styles.title}>{action.title}</Text>
         </Pressable>
