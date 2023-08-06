@@ -7,7 +7,7 @@ export interface IContentPreviewSection {
   data: sectionData[];
 }
 
-export type sectionData = IContentPreviewVideo | IContentPreviewPoll;
+export type sectionData = IContentPreviewVideo | IContentPreviewPoll | IContentPreviewShort;
 
 export interface IContentPreviewVideo {
   id: string;
@@ -40,6 +40,15 @@ export interface IContentPreviewHeader {
   author: string;
   authorImage: string;
   publicationDate: string;
+}
+
+export interface IContentPreviewShort {
+  shorts: {
+    id: string;
+    title: string;
+    image: string;
+    views: string;
+  }[];
 }
 
 export type IContentPreviewSectionType = 'shorts' | 'videos' | 'polls' | 'publications';

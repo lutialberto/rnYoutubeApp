@@ -4,16 +4,26 @@
       "type": "shorts",
       "data": [
         {
-          "id": "1",
-          "header": {
-            "author": "Author 1",
-            "authorImage": "https://yt3.ggpht.com/lAk48f7ez_Z78afKJbwNaH00JUE9Hct5rY0uuBcoQbDOzoypDGqyD0IJzTuZFxL_gUELRXJT=s68-c-k-c0x00ffffff-no-rj",
-            "publicationDate": "3 minutos"
-          },
-          "title": "First Item",
-          "duration": 60,
-          "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
-          "views": "100"
+          "shorts": [
+            {
+              "id": "1",
+              "title": "First Item",
+              "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
+              "views": "128 k"
+            },
+            {
+              "id": "2",
+              "title": "Second Item",
+              "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
+              "views": "100 k"
+            },
+            {
+              "id": "3",
+              "title": "Third Item",
+              "image": "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-36703721.jpg",
+              "views": "500 k"
+            }
+          ]
         }
       ]
     },

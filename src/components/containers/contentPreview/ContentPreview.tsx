@@ -5,31 +5,18 @@ import {IContentPreviewProps} from './IContentPreviewProps';
 import VideoPreview from './components/videoPreview/VideoPreview';
 import {
   IContentPreviewPoll,
+  IContentPreviewShort,
   IContentPreviewVideo,
 } from '~/services/models/ContentPreviewListResponse';
 import PollPreview from './components/pollPreview/PollPreview';
+import ShortPreview from './components/shortPreview/ShortPreview';
 
 const ContentPreview = (props: IContentPreviewProps) => {
   return (
     <SectionList
       showsVerticalScrollIndicator={false}
       sections={props.sections}
-      keyExtractor={(item, index) => item.id + index}
-      renderSectionHeader={({section: {type, data}}) => (
-        <>
-          <SectionSeparator />
-          {type === 'shorts' && (
-            <>
-              <Text style={{fontWeight: 'bold'}}>{type}</Text>
-              {data.map(item => (
-                <View style={styles.item} key={item.id}>
-                  <Text style={styles.title}>{item.id}</Text>
-                </View>
-              ))}
-            </>
-          )}
-        </>
-      )}
+      renderSectionHeader={() => <SectionSeparator />}
       renderItem={({item, section: {type}}) => (
         <>
           {type === 'videos' && (
@@ -48,6 +35,7 @@ const ContentPreview = (props: IContentPreviewProps) => {
               onDislikePress={() => console.log('dislike pressed')}
             />
           )}
+          {type === 'shorts' && <ShortPreview shorts={item as IContentPreviewShort} />}
         </>
       )}
     />
@@ -56,12 +44,4 @@ const ContentPreview = (props: IContentPreviewProps) => {
 
 export default ContentPreview;
 
-const styles = StyleSheet.create({
-  item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-  },
-});
+const styles = StyleSheet.create({});
